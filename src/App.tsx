@@ -31,17 +31,11 @@ function App() {
               </button>
             ) : (
               <>
-                <Link
-                  to="/team_project_frontend/register"
-                  className="nav__data-links"
-                >
+                <Link to="/register" className="nav__data-links">
                   Sign up
                 </Link>
 
-                <Link
-                  to="/team_project_frontend/login"
-                  className="nav__data-links"
-                >
+                <Link to="/login" className="nav__data-links">
                   Log in
                 </Link>
               </>
@@ -53,11 +47,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/team_project_frontend/login" element={<LoginPage />} />
-          <Route
-            path="/team_project_frontend/register"
-            element={<RegistrationPage />}
-          />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegistrationPage />} />
         </Routes>
       </main>
     </>
