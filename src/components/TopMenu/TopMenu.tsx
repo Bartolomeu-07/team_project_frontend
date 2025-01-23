@@ -8,7 +8,6 @@ export const TopMenu: React.FC = () => {
     ['#live', 'Live'],
     ['#finished', 'Finished'],
     ['#scheduled', 'Scheduled'],
-    ['#coś', 'Coś'],
   ];
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
