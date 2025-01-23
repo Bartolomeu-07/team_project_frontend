@@ -1,0 +1,38 @@
+@use '../../scss/variables' as *;
+
+.nav {
+  display: flex;
+
+  &__all {
+    margin-right: 8%;
+
+    &__link {
+      text-decoration: none;
+      font-weight: 700;
+      color: $color-grey-50;
+      line-height: 40px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 18%;
+    width: 100%;
+    overflow: auto;
+
+    &__link {
+      text-decoration: none;
+      font-weight: 700;
+      color: $color-grey-50;
+      line-height: 40px;
+    }
+  }
+
+  &__active {
+    font-size: 32px;
+    font-weight: 600;
+    color: $color-secondary;
+    text-align: center;
+    text-decoration-skip-ink: none;
+  }
+}
