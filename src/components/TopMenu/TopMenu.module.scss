@@ -3,7 +3,7 @@
 .nav {
   display: flex;
 
-  &__all {
+  &__active {
     margin-right: 8%;
 
     &__link {
@@ -19,6 +19,23 @@
     column-gap: 18%;
     width: 100%;
     overflow: auto;
+    position: relative;;
+
+    &:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      width: 70px;
+      height: 100%;
+      z-index: 2;
+      right: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        $color-grey-80
+      );
+    }
 
     &__link {
       text-decoration: none;
@@ -36,3 +53,7 @@
     text-decoration-skip-ink: none;
   }
 }
+
+.hidden {
+    display: none;
+  }

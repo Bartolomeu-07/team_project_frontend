@@ -5,23 +5,22 @@ import cn from 'classnames';
 
 export const TopMenu: React.FC = () => {
   const links = [
+    ['#all', 'All'],
     ['#live', 'Live'],
     ['#finished', 'Finished'],
     ['#scheduled', 'Scheduled'],
+    ['#coś', 'Coś'],
   ];
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <nav className={style.nav}>
-      <div className={style.nav__all}>
+      <div className={style.nav__active}>
         <Link
-          className={cn(style.nav__all__link, {
-            [style.nav__active]: activeIndex === null,
-          })}
-          to="#all"
-          onClick={() => setActiveIndex(null)}          
+          className={`${style.nav__active__link} ${style.nav__active}`}
+          to={links[activeIndex][0]}
         >
-          All
+          {links[activeIndex][1]}
         </Link>
       </div>
 
@@ -31,7 +30,7 @@ export const TopMenu: React.FC = () => {
             onClick={() => setActiveIndex(index)}
             key={link[0]}
             className={cn(style.nav__container__link, {
-              [style.nav__active]: activeIndex === index,
+              [style.hidden]: activeIndex === index,
             })}
             to={link[0]}
           >
