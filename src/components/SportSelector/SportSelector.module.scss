@@ -1,0 +1,22 @@
+@use '../../scss/variables.scss' as *;
+
+.SelectInput {
+  &Option {
+    &Container {
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      line-height: 22px;
+      flex-shrink: 0;
+      min-width: 152px;
+    }
+
+    &Icon {
+      width: 24px;
+      height: 24px;
+      // flex-shrink: 0;
+    }
+  }
+}

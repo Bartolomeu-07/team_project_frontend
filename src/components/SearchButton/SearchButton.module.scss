@@ -1,0 +1,27 @@
+@use '../../scss/variables.scss' as *;
+
+.SearchButton {
+  background: $color-grey-70;
+  border: none;
+  border-radius: 5px;
+  padding: 13px 8px 13px 5px;
+  cursor: pointer;
+  min-width: 37px;
+
+  &Icon {
+    aspect-ratio: 1/1;
+    color: $color-grey-20;
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  &:focus-visible {
+    outline: 2px solid $color-grey-30;
+  }
+  &:hover {
+    background: $color-grey-60;
+  }
+  &:active {
+    background: $color-grey-50;
+  }
+}

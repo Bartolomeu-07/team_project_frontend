@@ -1,0 +1,16 @@
+@use '../../scss/variables.scss' as *;
+
+.DatePicker {
+  background: $color-grey-70;
+  border: none;
+  border-radius: 5px;
+  color: $color-grey-20;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  padding: 13px 8px;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+}
