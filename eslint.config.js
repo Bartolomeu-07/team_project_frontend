@@ -8,6 +8,7 @@ import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import prettierPlugin from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
+import pluginQuery from '@tanstack/eslint-plugin-query';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -36,7 +37,7 @@ export default tseslint.config(
     },
     parser: '@typescript-eslint/parser',
     rules: {
-      "react/jsx-key": "warn",
+      'react/jsx-key': 'warn',
       'react/prop-types': 'off',
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
@@ -57,6 +58,7 @@ export default tseslint.config(
       ],
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
+      ...pluginQuery.configs['flat/recommended'],
     },
   }
 );
